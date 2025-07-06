@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 1st Anniversary ❤️</title>
+<link rel="stylesheet" href="style.css">
+<style>
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/IMG_7180.jpeg') no-repeat center/cover fixed;
+    display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
+    backdrop-filter:brightness(0.75);
+    overflow:hidden;
+}
+.content{background:rgba(0,0,0,0.45);padding:2rem;border-radius:14px;max-width:90%;box-shadow:0 4px 15px rgba(0,0,0,0.3);}
+.content h1{font-size:2.6rem;margin-bottom:1rem;text-shadow:0 0 10px #ff4d94;}
+.content p{font-size:1.2rem;line-height:1.6;}
+#heart-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:-1;}
+.back{color:#ffb3d9;text-decoration:underline;margin-top:1.5rem;display:inline-block;}
+</style>
+</head>
+<body>
+<div id="heart-container"></div>
+<div class="content">
+<h1>Happy 1st Year Anniversary, Rojalin! 💖</h1>
+<p>Rojalin, this year has been magical because of you. We've had our ups and downs, our laughs and little fights — but every moment with you is something I'd choose over and over again.<br><br>
+I know I mess things up sometimes, I know I hurt you without meaning to. But please trust this: your boyfriend loves you more than words can ever say. 💕<br><br>
+You are not just a part of my life — you are my life.<br><br>
+Forever yours,<br><strong>Sohan</strong></p>
+<a href="index.html" class="back">← Back to our memories</a>
+</div>
+<audio id="instAudio" src="audio/instrumental_love.mp3" autoplay loop></audio>
+<script>
+const heartContainer=document.getElementById('heart-container');
+function createHeart(){const h=document.createElement('div');h.classList.add('heart');h.style.left=Math.random()*100+'vw';h.style.animationDuration=Math.random()*2+4+'s';heartContainer.appendChild(h);setTimeout(()=>h.remove(),6000);}setInterval(createHeart,400);
+document.getElementById('instAudio').play().catch(()=>{});
+</script>
+</body>
+</html>
