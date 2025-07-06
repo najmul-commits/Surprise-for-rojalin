@@ -1,0 +1,22 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+body{background:#fff0f6;color:#333;overflow-x:hidden;}
+header{text-align:center;padding:2rem 1rem;}
+h1{font-size:2.5rem;margin-bottom:0.5rem;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;padding:2rem;}
+.gallery img,.gallery video{width:100%;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.15);}
+.photo p{margin-top:0.5rem;text-align:center;font-size:0.95rem;}
+.message{padding:2rem 1.5rem;background:#ffeff7;margin:2rem 0;text-align:center;border-top:4px dashed #ff80b3;}
+.message h2{font-size:1.8rem;margin-bottom:1rem;}
+#password-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(255,240,246,0.95);display:flex;align-items:center;justify-content:center;z-index:9999;}
+.password-box{background:white;border-radius:12px;padding:2rem 2.5rem;box-shadow:0 4px 10px rgba(0,0,0,0.2);text-align:center;}
+.password-box input{padding:0.6rem 1rem;font-size:1rem;border:2px solid #ff80b3;border-radius:8px;margin-top:1rem;width:200px;}
+.password-box button{display:block;margin:1.2rem auto 0;padding:0.6rem 1.2rem;font-size:1rem;border:none;background:#ff4d94;color:white;border-radius:8px;cursor:pointer;transition:background 0.2s;}
+.password-box button:hover{background:#ff80b3;}
+.error{color:red;margin-top:0.5rem;height:1.2rem;}
+.heart{position:fixed;width:20px;height:20px;background:#ff4d94;transform:rotate(-45deg);animation:floatUp 6s linear infinite;}
+.heart:before,.heart:after{content:'';position:absolute;width:20px;height:20px;background:#ff4d94;border-radius:50%;}
+.heart:before{top:-10px;left:0;}
+.heart:after{left:10px;top:0;}
+@keyframes floatUp{0%{transform:translateY(0) rotate(-45deg);opacity:1;}100%{transform:translateY(-100vh) rotate(-45deg);opacity:0;}}
+.surprise-btn{display:inline-block;padding:0.8rem 1.5rem;background:#ff4d94;color:#fff;border-radius:30px;font-size:1.1rem;text-decoration:none;transition:transform 0.2s,background 0.2s;box-shadow:0 4px 10px rgba(0,0,0,0.15);}
+.surprise-btn:hover{background:#ff80b3;transform:scale(1.05);}
